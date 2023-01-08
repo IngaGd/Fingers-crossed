@@ -1,5 +1,6 @@
 :root {
     --primary-background: #fff;
+    --secondary-background: #cacfd2;
 }
 html {
     scroll-behavior: smooth;

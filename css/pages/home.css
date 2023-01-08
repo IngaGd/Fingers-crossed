@@ -5,3 +5,95 @@
 /* 3rs-party:  */
 
 /* components (by alphabet):  */
+
+/* CUSTOM */
+
+/*  header section start */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*  header section end */
+
+/*  hero section start */
+.container.hero {
+    height: 60vh;
+    background-color: var(--secondary-background);
+}
+
+h2 {
+    font-size: 5em;
+}
+/*  hero section end */
+
+/*  services section start */
+.container.services {
+    height: 60vh;
+    background-color: var(--primary-background);
+}
+
+.row.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 50%;
+    gap: 50px;
+}
+
+h3 {
+    font-size: 2.8em;
+}
+
+.row.services {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+h5 {
+    font-size: 1.6em;
+}
+/*  services section end */
+
+/* gallery section start */
+.container.gallery {
+    height: 80vh;
+    background-color: var(--secondary-background);
+}
+
+.row.top {
+    display: flex;
+    height: 50%;
+}
+
+.row.bottom {
+    display: flex;
+    height: 50%;
+}
+/* gallery section end */
+
+/* pricelist section start */
+.container.pricelist {
+    height: 100vh;
+    background-color: var(--primary-background);
+}
+/* pricelist section end */
+
+/* footer section start */
+.container.footer {
+    height: 50vh;
+    background-color: var(--secondary-background);
+}
+.container.footer > .row.top {
+    display: flex;
+    height: 80%;
+}
+
+.container.footer > .row.bottom {
+    display: flex;
+    height: 20%;
+}
+/* footer section end */
