@@ -1,0 +1,47 @@
+.container.services {
+    background: linear-gradient(
+        0,
+        rgba(139, 204, 204, 0.5),
+        rgba(220, 172, 211, 0.5)
+    );
+    height: 70vh;
+    display: flex;
+    flex-direction: flex-start;
+    align-items: center;
+}
+
+.services .title {
+    color: black;
+    text-shadow: 0 8px 30px #0003;
+    height: 70%;
+    margin-top: 50px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 1.2;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.service:hover {
+    transform: translateY(-10);
+    /* box-shadow: 0 5px 10px rgb(0 0 0 /20%);*/
+    box-shadow: 0 12px 30px #0003;
+    transform: translateY(-10px);
+}
+
+.service .img {
+    width: 35%;
+}
+
+h5 {
+    font-size: 2em;
+}

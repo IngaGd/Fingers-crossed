@@ -1,6 +1,7 @@
 :root {
-    --primary-background: #fff;
-    --secondary-background: #cacfd2;
+    --primary-color: #fff;
+    --secondary-color: rgba(139, 204, 204, 1); /*#8bcccc*/
+    --third-color: rgba(220, 172, 211, 1); /*#dcacd3*/
 }
 html {
     scroll-behavior: smooth;
@@ -16,6 +17,7 @@ body * {
 
 body {
     font-family: 'Codec Pro', sans-serif;
+    letter-spacing: 0.5px;
 }
 /* Bazinis antrastes stilius:*/
 

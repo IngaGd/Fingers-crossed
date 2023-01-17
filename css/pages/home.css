@@ -17,7 +17,7 @@
 }
 
 .logo {
-    width: 10%;
+    width: 22%;
 }
 
 nav {
@@ -32,10 +32,12 @@ nav {
 nav > a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 16px;
+    text-transform: uppercase;
     padding: 12px 20px 12px 20px;
     border-radius: 3px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 a {
@@ -44,19 +46,20 @@ a {
 }
 
 nav > a:hover {
-    background-color: grey;
-    color: var(--primary-background);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 0 5px 10px rgb(0 0 0 /20%);
 }
 
 nav > .btn {
-    background-color: grey;
-    color: var(--primary-background);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 nav > .btn:hover {
-    background-color: var(--primary-background);
+    background-color: var(--primary-color);
     color: black;
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
 }
 
 /*  header section end */
@@ -64,7 +67,7 @@ nav > .btn:hover {
 /*  hero section start */
 .container.hero {
     padding-top: 0;
-    background-color: var(--primary-background);
+    background-color: var(--primary-color);
 }
 
 .hero > .row {
@@ -85,7 +88,7 @@ h2 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--primary-background);
+    background-color: var(--primary-color);
 }
 
 .row.title {
@@ -98,16 +101,6 @@ h2 {
 
 h3 {
     font-size: 2.8em;
-}
-/*
-.row.services {
-    display: flex;
-    text-align: center;
-    align-items: center;
-}*/
-
-h5 {
-    font-size: 1.6em;
 }
 /*  services section end */
 
@@ -125,7 +118,7 @@ h5 {
 
 /* pricelist section start */
 .container.pricelist {
-    background-color: var(--primary-background);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
 }
@@ -138,7 +131,7 @@ h5 {
 /* footer section start */
 .container.footer {
     height: 50vh;
-    background-color: var(--primary-background);
+    background-color: var(--primary-color);
 }
 .container.footer > .row.top {
     display: flex;
