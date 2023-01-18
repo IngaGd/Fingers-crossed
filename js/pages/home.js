@@ -1,9 +1,9 @@
 // IMPORT
-import { services } from '../components/services/services.js';
+import { tiles } from '../components/tiles/tiles.js';
 import { servicesData } from '../data/servicesData.js';
 
 // EXECUTION
 
 /* Serives start */
-services(servicesData);
+tiles('services_block', servicesData);
 /* Serives end */
