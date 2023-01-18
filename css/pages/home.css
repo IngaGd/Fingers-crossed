@@ -53,14 +53,14 @@ nav > a:hover {
 }
 
 nav > .btn {
-    background-color: var(--secondary-color);
+    background-color: var(--third-color);
     color: var(--primary-color);
 }
 
 nav > .btn:hover {
     background-color: var(--primary-color);
     color: black;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--third-color);
 }
 
 /*  header section end */
