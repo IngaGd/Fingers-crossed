@@ -6,7 +6,9 @@
 @import '../3rd-party/font-awesome.min.css';
 
 /* components (by alphabet):  */
+@import '../components/experts-gallery.css';
 @import '../components/gallery.css';
+@import '../components/header-underline.css';
 @import '../components/services.css';
 @import '../components/video.css';
 /* CUSTOM */
@@ -18,7 +20,7 @@
 }
 
 .logo {
-    width: 22%;
+    width: 18%;
 }
 
 nav {
@@ -129,10 +131,20 @@ h3 {
 }
 /* pricelist section end */
 
+/* Team Experts start */
+
+.container.team {
+    padding-top: 10px;
+}
+
+.underline-title-p {
+    margin-bottom: 50px;
+}
+/* Team Experts end */
+
 /* footer section start */
 .container.footer {
     height: 50vh;
-    background-color: var(--primary-color);
 }
 .container.footer > .row.top {
     display: flex;

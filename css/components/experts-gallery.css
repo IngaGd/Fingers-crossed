@@ -1,52 +1,51 @@
-.gallery {
+.experts-gallery {
     margin-top: 50px;
     display: grid;
 }
 
-.gallery > .content {
+.experts-gallery > .content {
     display: grid;
     gap: 30px;
     transition: all 0.5s;
 }
-.gallery > .content > .card {
+.experts-gallery > .content > .card {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 95px;
     overflow: hidden;
     position: relative;
     transition: all 0.5s;
 }
 
-.gallery .card > .visual {
+.experts-gallery .card > .visual {
     width: 100%;
     position: relative;
     transition: all 0.5s;
 }
 
-.gallery .visual > .img {
+.experts-gallery .visual > .img {
     width: 100%;
     object-fit: cover;
     object-position: center;
     transition: all 0.5s;
 }
 
-.gallery .card:hover .img {
+.experts-gallery .card:hover .img {
     transform: scale(1.2);
     transition: all 0.5s;
-    cursor: pointer;
 }
 
-.gallery .visual > .hover-layer {
+.experts-gallery .visual > .hover-layer {
     display: none;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgb(0 0 0 /20%);
+    background-color: rgba(139, 204, 204, 0.9);
 }
-.gallery .card:hover .hover-layer {
+.experts-gallery .card:hover .hover-layer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +54,7 @@
     cursor: pointer;
 }
 
-.gallery .card:hover .hover-layer > .socials {
+.experts-gallery .card:hover .hover-layer > .socials {
     flex-direction: row;
 }
 
@@ -89,16 +88,25 @@
 }
 
 @media (min-width: 576px) {
-    .gallery > .content {
+    .experts-gallery > .content {
         grid-template-columns: 1fr 1fr;
     }
-    .gallery > .content > .card {
+    .experts-gallery > .content > .card {
         width: 90%;
     }
 }
 
 @media (min-width: 768px) {
-    .gallery > .content {
+    .experts-gallery > .content {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .experts-gallery > .content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .experts-gallery > .content > .card {
+        width: 100%;
     }
 }
