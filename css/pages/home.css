@@ -7,6 +7,7 @@
 
 /* components (by alphabet):  */
 @import '../components/experts-gallery.css';
+@import '../components/footer.css';
 @import '../components/gallery.css';
 @import '../components/header-underline.css';
 @import '../components/services.css';
@@ -19,7 +20,7 @@
     padding-bottom: 0;
 }
 
-.logo {
+nav > .logo {
     width: 18%;
 }
 
@@ -141,18 +142,3 @@ h3 {
     margin-bottom: 50px;
 }
 /* Team Experts end */
-
-/* footer section start */
-.container.footer {
-    height: 50vh;
-}
-.container.footer > .row.top {
-    display: flex;
-    height: 80%;
-}
-
-.container.footer > .row.bottom {
-    display: flex;
-    height: 20%;
-}
-/* footer section end */

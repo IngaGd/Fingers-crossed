@@ -1,0 +1,38 @@
+.container.footer {
+    padding-top: 15px;
+    padding-bottom: 50px;
+    background-color: rgba(220, 172, 211, 0.3);
+}
+
+.footer > .row.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo.footer {
+    align-items: flex-start;
+    width: 120px;
+}
+
+.contacts {
+    line-height: 1.6;
+}
+
+.contacts > a {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+.contacts > a:hover {
+    background-color: var(--secondary-color);
+    font-size: larger;
+    color: #fff;
+}
+
+.terms {
+    text-align: right;
+}
