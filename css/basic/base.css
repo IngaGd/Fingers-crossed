@@ -1,5 +1,7 @@
 :root {
-    --primary-background: #fff;
+    --primary-color: #fff;
+    --secondary-color: rgba(139, 204, 204, 1); /*#8bcccc*/
+    --third-color: rgba(220, 172, 211, 1); /*#dcacd3*/
 }
 html {
     scroll-behavior: smooth;
@@ -14,10 +16,47 @@ body * {
 }
 
 body {
-    font-family: Poppins, sans-serif;
+    font-family: 'Codec Pro', sans-serif;
+    letter-spacing: 0.5px;
+}
+/* Bazinis antrastes stilius:*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--font-color-main);
+    font-weight: 600;
+}
+/* h2 breakpoints */
+.section-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+@media (min-width: 576px) {
+    .section-title {
+        font-size: 1.9rem;
+    }
 }
 
-/* Bazinis antrastes stilius:*/
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2.25rem;
+    }
+}
+@media (min-width: 992px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 1.2;
+}
+h5 {
+    font-size: 16px;
+}
 
 /* Bazinis apraso stilius*/
 

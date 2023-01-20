@@ -1,0 +1,112 @@
+.experts-gallery {
+    margin-top: 50px;
+    display: grid;
+}
+
+.experts-gallery > .content {
+    display: grid;
+    gap: 30px;
+    transition: all 0.5s;
+}
+.experts-gallery > .content > .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 95px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.experts-gallery .card > .visual {
+    width: 100%;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.experts-gallery .visual > .img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s;
+}
+
+.experts-gallery .card:hover .img {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.experts-gallery .visual > .hover-layer {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(139, 204, 204, 0.9);
+}
+.experts-gallery .card:hover .hover-layer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.experts-gallery .card:hover .hover-layer > .socials {
+    flex-direction: row;
+}
+
+.hover-layer > p,
+.hover-layer > .socials .icon {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.hover-layer > .expert-name {
+    font-size: 20px;
+}
+
+.hover-layer > .expert-position {
+    font-size: 16px;
+}
+
+.hover-layer > .socials {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.hover-layer > .socials > a:hover {
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+@media (min-width: 576px) {
+    .experts-gallery > .content {
+        grid-template-columns: 1fr 1fr;
+    }
+    .experts-gallery > .content > .card {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .experts-gallery > .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .experts-gallery > .content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .experts-gallery > .content > .card {
+        width: 100%;
+    }
+}

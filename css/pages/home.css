@@ -3,5 +3,142 @@
 @import '../basic/layout.css';
 
 /* 3rs-party:  */
+@import '../3rd-party/font-awesome.min.css';
 
 /* components (by alphabet):  */
+@import '../components/experts-gallery.css';
+@import '../components/footer.css';
+@import '../components/gallery.css';
+@import '../components/header-underline.css';
+@import '../components/services.css';
+@import '../components/video.css';
+/* CUSTOM */
+
+/* header section start */
+.main-header {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+nav > .logo {
+    width: 18%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 12px 20px 12px 20px;
+    border-radius: 3px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav > a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 0 5px 10px rgb(0 0 0 /20%);
+}
+
+nav > .btn {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+}
+
+nav > .btn:hover {
+    background-color: var(--primary-color);
+    color: black;
+    border: 1px solid var(--third-color);
+}
+
+/*  header section end */
+
+/*  hero section start */
+.container.hero {
+    padding-top: 0;
+    background-color: var(--primary-color);
+}
+
+.hero > .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 5em;
+}
+/*  hero section end */
+
+/*  services section start */
+.container.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.row.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+h3 {
+    font-size: 2.8em;
+}
+/*  services section end */
+
+/* gallery section start */
+.container.gallery {
+    background-color: var(--primary-background);
+    display: flex;
+}
+
+.gallery > .row {
+    gap: 10px;
+}
+
+/* gallery section end */
+
+/* pricelist section start */
+.container.pricelist {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    width: 60%;
+}
+/* pricelist section end */
+
+/* Team Experts start */
+
+.container.team {
+    padding-top: 10px;
+}
+
+.underline-title-p {
+    margin-bottom: 50px;
+}
+/* Team Experts end */

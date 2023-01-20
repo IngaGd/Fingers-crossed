@@ -1,0 +1,104 @@
+.gallery {
+    margin-top: 50px;
+    display: grid;
+}
+
+.gallery > .content {
+    display: grid;
+    gap: 30px;
+    transition: all 0.5s;
+}
+.gallery > .content > .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.gallery .card > .visual {
+    width: 100%;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.gallery .visual > .img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s;
+}
+
+.gallery .card:hover .img {
+    transform: scale(1.2);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.gallery .visual > .hover-layer {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0 0 0 /20%);
+}
+.gallery .card:hover .hover-layer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.gallery .card:hover .hover-layer > .socials {
+    flex-direction: row;
+}
+
+.hover-layer > p,
+.hover-layer > .socials .icon {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.hover-layer > .expert-name {
+    font-size: 20px;
+}
+
+.hover-layer > .expert-position {
+    font-size: 16px;
+}
+
+.hover-layer > .socials {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.hover-layer > .socials > a:hover {
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+@media (min-width: 576px) {
+    .gallery > .content {
+        grid-template-columns: 1fr 1fr;
+    }
+    .gallery > .content > .card {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery > .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
