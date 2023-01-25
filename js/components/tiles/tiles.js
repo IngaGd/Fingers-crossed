@@ -1,31 +1,40 @@
+import { IsValid } from '../is-valid/IsValid.js';
+
 function tiles(selector, data) {
+    //selector yra id, data - servicesData
     if (typeof selector !== 'string') {
         throw new Error('Selector should be string');
     }
 
     if (!Array.isArray(data) || data.length === 0) {
-        throw new Error('Data should be array object');
+        throw new Error('Data should be not empty array of objects');
     }
 
     const servicesDOM = document.getElementById(selector);
     if (servicesDOM === null) {
-        throw new Error('Cannot find element with prowided selector ${ddd}');
+        throw new Error(
+            `Cannot find element with prowided selector ${selector}`
+        );
     }
 
     let HTML = '';
 
-    // is duomenu atsifiltruoti tik objektus
-    data = data
-        .filter((item) => typeof item === 'object')
-        .filter((item) => item !== null)
-        .filter((item) => !Array.isArray(item));
+    for (const item of data) {
+        if (
+            !IsValid.object(item) ||
+            !IsValid.icon(item.icon) ||
+            !IsValid.title(item.title) ||
+            !IsValid.text(item.text)
+        ) {
+            continue;
+        }
 
-    for (let item of data) {
-        console.log(item);
         HTML += `<div class="col-12 col-md-6 col-lg-3 service">
-                                <img class="img" src="./img/logo/Fingers_crossed_logopos_icon.jpg" alt="Nail care image">
+                            <div class="section-title">
+                                ${item.icon}
                                 <h5>${item.title}</h5>
-                                <p class="descriptio">${item.text}</p>
+                            </div>
+                                <p class="description">${item.text}</p>
                             </div>`;
     }
 

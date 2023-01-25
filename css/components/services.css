@@ -4,7 +4,6 @@
         rgba(139, 204, 204, 0.5),
         rgba(220, 172, 211, 0.5)
     );
-    height: 70vh;
     display: flex;
     flex-direction: flex-start;
     align-items: center;
@@ -12,9 +11,13 @@
 
 .services .title {
     color: black;
-    text-shadow: 0 8px 30px #0003;
-    height: 70%;
-    margin-top: 50px;
+    /*text-shadow: 0 8px 30px #0003;*/
+    /*height: 70%;*/
+    margin-top: 5px;
+}
+
+.row > .service {
+    gap: 10px;
 }
 
 .service {
@@ -24,11 +27,22 @@
     gap: 10px;
     background-color: #fff;
     border-radius: 15px;
-    padding: 30px;
-    font-size: 16px;
+    padding: 10px 30px 20px 30px;
+    font-size: 14px;
     line-height: 1.2;
     transition: all 0.3s;
     cursor: pointer;
+    min-height: 380px;
+}
+
+.service > .section-title {
+    min-height: 120px;
+}
+
+.service > .description {
+    margin-top: 10px;
+    text-align: left;
+    text-align: justify;
 }
 
 .service:hover {
@@ -43,5 +57,5 @@
 }
 
 h5 {
-    font-size: 2em;
+    font-size: 20px;
 }
