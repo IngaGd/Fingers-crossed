@@ -11,6 +11,7 @@ tiles('services_block', servicesData);
 /* Serives end */
 
 /* Gallery start */
-const gallery = new Gallery('#gallery_block', galleryData);
-console.log(gallery);
+new Gallery('#gallery_block', galleryData);
+//new Gallery kviecia clases Gallery konstrukroius ir jame aprasyta metoda
+//this.init()
 /* Gallery end */

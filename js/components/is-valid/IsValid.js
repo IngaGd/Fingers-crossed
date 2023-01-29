@@ -6,6 +6,14 @@ class IsValid {
         return true;
     }
 
+    static nonEmptyString(str) {
+        return typeof str === 'string' || str !== '';
+    }
+
+    static nonEmptyArray(arr) {
+        return Array.isArray(arr) && arr.length > 0;
+    }
+
     static icon(str) {
         if (typeof str !== 'string' || str === '') {
             return false;
