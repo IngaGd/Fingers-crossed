@@ -77,6 +77,21 @@ class Gallery {
             return false;
         }
 
+        // PIRMAS ATRINKIMO BUDAS
+        //const validData = [];
+        //for (const item of this.data.content) {
+        //    if (this.isValidGalleryItem(item)) {
+        //        validData.push(item);
+        //    }
+        //}
+        //this.data.content = validData;
+
+        // ANTRAS ATRINKIMO BUDAS
+
+        this.data.content = this.data.content.filter(
+            this.isValidGalleryItem.bind(this)
+        ); //naudoti vaikinius elementus is Gallery
+
         return true;
     }
 
@@ -104,10 +119,67 @@ class Gallery {
         return order === 'acd' ? dataCopy : dataCopy.reverse();
     }
 
-    render() {
-        let HTML = '';
+    isValidGalleryItemImage(str) {
+        if (str !== '') {
+            return true;
+        }
+    }
 
-        console.log(this.dataForRendering);
+    isValidGalleryItemImageAlt(str) {
+        if (str !== '') {
+            return true;
+        }
+    }
+
+    isValidGalleryItemService(str) {
+        if (str !== '') {
+            return true;
+        }
+    }
+
+    isValidGalleryItemDescription(str) {
+        if (str !== '') {
+            return true;
+        }
+    }
+
+    // aprasyti isValidGalleryItemImage ir likusius metodus
+    isValidGalleryItem(item) {
+        if (
+            item.published !== true ||
+            !this.isValidGalleryItemImage(item.img) ||
+            !this.isValidGalleryItemImageAlt(item.alt) ||
+            !this.isValidGalleryItemService(item.service) ||
+            !this.isValidGalleryItemDescription(item.description)
+        ) {
+            return false;
+        }
+        return true;
+    }
+
+    generateCard() {
+        let cardHTML = '';
+        for (const card of this.dataForRendering) {
+            if (card.published !== true) {
+                //prideti || !this.isGalleryCardValid(card)
+                continue;
+            }
+            cardHTML += `<div class="card">
+                    <div class="visual">
+                        <img class="img" src="${card.img}" alt="${card.alt}">
+                        <div class="hover-layer">
+                            <p class=“service>${card.service}</p>
+                            <p class=“description”>${card.description}</p>
+                        </div>
+                    </div>
+                </div>`;
+        }
+
+        return cardHTML;
+    }
+
+    render() {
+        let HTML = `<div class="content">${this.generateCard()} </div>`;
 
         this.DOM.innerHTML = HTML;
     }
