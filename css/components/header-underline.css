@@ -3,16 +3,14 @@
     flex-direction: column;
 }
 .underline {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     height: 2px;
-    width: 70px;
+    width: 150px;
     margin-top: 15px;
 }
+
 .center {
     align-items: center;
-}
-.left {
-    align-items: flex-start;
 }
 
 .underline-title-p {
@@ -20,5 +18,5 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+    gap: 15px;
 }
