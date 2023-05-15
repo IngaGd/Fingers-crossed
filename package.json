@@ -35,5 +35,8 @@
         "transform": {
             "^.+\\.jsx?$": "babel-jest"
         }
+    },
+    "dependencies": {
+        "sass": "^1.62.1"
     }
 }
