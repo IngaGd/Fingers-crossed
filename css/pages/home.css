@@ -120,3 +120,20 @@ nav > .btn:hover {
     margin-bottom: 50px;
 }
 /* Team Experts end */
+
+.row.apie-gallery {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.apie-img {
+    display: flex;
+    width: 1000px;
+    border-radius: 5px;
+}
+
+.underline {
+    margin-bottom: 10px;
+}

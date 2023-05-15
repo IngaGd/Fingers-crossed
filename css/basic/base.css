@@ -22,31 +22,6 @@ body {
 /* Bazinis antrastes stilius:*/
 /* h2 breakpoints */
 
-@media (min-width: 576px) {
-    .section-title {
-        font-size: 1.9rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .section-title {
-        font-size: 2.25rem;
-    }
-}
-@media (min-width: 992px) {
-    .section-title {
-        font-size: 2.5rem;
-    }
-}
-
-h3 {
-    font-size: 20px;
-    line-height: 1.2;
-}
-h5 {
-    font-size: 16px;
-}
-
 /* Bazinis apraso stilius*/
 
 /* Bazinis paragrafo stilius: */

@@ -29,7 +29,7 @@ function tiles(selector, data) {
             continue;
         }
 
-        HTML += `<div class="col-12 col-md-6 col-lg-3 service">
+        HTML += `<div class="service">
                             <div class="section-title">
                                 ${item.icon}
                                 <h5>${item.title}</h5>
