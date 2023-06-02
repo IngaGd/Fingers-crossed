@@ -23,6 +23,7 @@
 
     .row.services-description {
         flex-direction: column;
+        gap: 10px;
     }
 
     .row.main-header > .logo > .logo-img {

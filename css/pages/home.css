@@ -20,6 +20,10 @@
     padding-bottom: 0;
 }
 
+.nav-mob {
+    display: none;
+}
+
 nav > .logo-link > .logo {
     width: 150px;
     padding: 0;
@@ -300,3 +304,44 @@ nav > .btn:hover {
     float: right;
     font-size: 22px;
 }
+
+@media (max-width: 576px) {
+    .container .nav-mob {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .row .main-header > .nav-mob {
+        width: 100%;
+        margin: 0;
+    }
+    nav {
+        display: none;
+    }
+    .nav-mob {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-mob > a.logo-link-mob > .logo {
+        width: 80px;
+    }
+    .nav-mob > .fa-bars {
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
+/* .nav-mob {
+                    display: flex;
+                    width: 40%;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 25px;
+                    cursor: pointer;
+                    .fa-glass,
+                    .fa-instagram,
+                    .cart {
+                        color: black;
+                    }
+                } */
