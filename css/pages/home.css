@@ -326,9 +326,29 @@ nav > .btn:hover {
     .nav-mob > a.logo-link-mob > .logo {
         width: 80px;
     }
-    .nav-mob > .fa-bars {
-        font-size: 25px;
+    .dropdown {
+        position: relative;
+    }
+    .dropdown > button {
+        border: none;
+        background-color: white;
         cursor: pointer;
+        font-size: 25px;
+    }
+    .dropdown-menu {
+        position: absolute;
+        left: -40px;
+        top: calc(100% + 0.5rem);
+        font-size: 14px;
+        line-height: 1cm;
+        background-color: white;
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+        opacity: 0;
+    }
+    .dropdown > .link:focus + .dropdown-menu {
+        opacity: 1;
     }
 }
 
