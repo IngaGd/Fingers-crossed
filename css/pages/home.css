@@ -334,6 +334,7 @@ nav > .btn:hover {
         background-color: white;
         cursor: pointer;
         font-size: 25px;
+        color: black;
     }
     .dropdown-menu {
         position: absolute;
