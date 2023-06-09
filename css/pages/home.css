@@ -53,6 +53,7 @@ nav > a {
     border-radius: 3px;
     transition: all 0.3s;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 a {
@@ -132,6 +133,7 @@ nav > .btn:hover {
 }
 /* Team Experts end */
 
+/* Page - About */
 .row.apie-gallery {
     display: flex;
     align-items: center;
@@ -194,6 +196,7 @@ nav > .btn:hover {
 .card > .description {
     padding: 10px 0px;
     display: flex;
+    line-height: 0.5cm;
     justify-content: space-between;
 }
 
@@ -306,9 +309,13 @@ nav > .btn:hover {
 }
 
 @media (max-width: 576px) {
-    .container .nav-mob {
+    .container.nav {
+        padding-bottom: 0;
+    }
+    .container.nav-mob {
         padding-left: 20px;
         padding-right: 20px;
+        height: 20px;
     }
     .row .main-header > .nav-mob {
         width: 100%;
@@ -334,11 +341,11 @@ nav > .btn:hover {
         background-color: white;
         cursor: pointer;
         font-size: 25px;
-        color: black;
+        color: rgb(80, 79, 79);
     }
     .dropdown-menu {
         position: absolute;
-        left: -40px;
+        left: -70px;
         top: calc(100% + 0.5rem);
         font-size: 14px;
         line-height: 1cm;
@@ -351,18 +358,32 @@ nav > .btn:hover {
     .dropdown > .link:focus + .dropdown-menu {
         opacity: 1;
     }
+    .container.list {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .container.list > .row {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container.list > .row > .list {
+        grid-template-columns: 1fr;
+    }
+    .container.about {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .container.about > .underline-title-p {
+        margin-bottom: 20px;
+    }
+    .apie-img {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
-
-/* .nav-mob {
-                    display: flex;
-                    width: 40%;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 25px;
-                    cursor: pointer;
-                    .fa-glass,
-                    .fa-instagram,
-                    .cart {
-                        color: black;
-                    }
-                } */

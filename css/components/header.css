@@ -1,0 +1,111 @@
+@import '../basic/base.css';
+
+.main-header {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-mob {
+    display: none;
+}
+
+nav > .logo-link > .logo {
+    width: 150px;
+    padding: 0;
+}
+
+.logo-link:hover {
+    background-color: initial;
+    color: initial;
+    box-shadow: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 12px 20px 12px 20px;
+    border-radius: 3px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav > a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 0 5px 10px rgb(0 0 0 /20%);
+}
+
+nav > .btn {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+}
+
+nav > .btn:hover {
+    background-color: var(--primary-color);
+    color: black;
+    border: 1px solid var(--third-color);
+}
+
+@media (max-width: 576px) {
+    .container .nav-mob {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .row .main-header > .nav-mob {
+        width: 100%;
+        margin: 0;
+    }
+    nav {
+        display: none;
+    }
+    .nav-mob {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-mob > a.logo-link-mob > .logo {
+        width: 80px;
+    }
+    .dropdown {
+        position: relative;
+    }
+    .dropdown > button {
+        border: none;
+        background-color: white;
+        cursor: pointer;
+        font-size: 25px;
+        color: black;
+    }
+    .dropdown-menu {
+        position: absolute;
+        left: -40px;
+        top: calc(100% + 0.5rem);
+        font-size: 14px;
+        line-height: 1cm;
+        background-color: white;
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+        opacity: 0;
+    }
+    .dropdown > .link:focus + .dropdown-menu {
+        opacity: 1;
+    }
+}

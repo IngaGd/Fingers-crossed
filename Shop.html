@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/pages/home.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/codec-pro">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/codec-pro');
+    </style>
     <title>Document</title>
 </head>
 
 <body>
-    <section class="container">
+    <section class="container nav">
         <div class="row main-header">
             <nav>
                 <a class="link" href="Apie.html">Apie mus</a>
@@ -23,6 +27,25 @@
                 <a class="link" href="#">Kontaktai</a>
                 <a class="btn" href="https://fingers-crossed-nail-studio.mytreatwell.lt/?fbclid=PAAaZ1c67PnrUYjey9ZzL7tUeaZ0k4f3P8zsvxOLFeZBP1QSRvGSs4y-K_rW8">Rezervuok</a>
             </nav>
+            <div class="nav-mob">
+                <a class="logo-link-mob" href="index.html">
+                    <img class="logo" src="./img/logo/Fingers_crossed_logopos_small.png" alt="Logo">
+                </a>
+                <div class="dropdown">
+                    <button class="link">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu active">
+                        <a class="link" href="Apie.html">Apie mus</a>
+                        <a class="link" href="https://fingers-crossed-nail-studio.mytreatwell.lt/services.html">Kainos</a>
+                        <a class="link" href="#">Galerija</a>
+                        <a class="link" href="Shop.html">Parduotuvė</a>
+                        <a class="link" href="#">Kontaktai</a>
+                        <a class="btn" href="https://fingers-crossed-nail-studio.mytreatwell.lt/?fbclid=PAAaZ1c67PnrUYjey9ZzL7tUeaZ0k4f3P8zsvxOLFeZBP1QSRvGSs4y-K_rW8">Rezervuok</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
         <!-- <a class="fa fa-bars" href="#"></a> -->
         </div>
@@ -44,7 +67,7 @@
                                 <a>17.5 EUR</a>
                             </div>
                         </div>
-                        <div class="right">
+                        <!-- <div class="right">
                             <div class="quantity">
                                 <a>0</a>
                             </div>
@@ -54,7 +77,7 @@
                             <div class="btn">
                                 -
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="card">
@@ -71,7 +94,7 @@
                                 <a>43.00 EUR</a>
                             </div>
                         </div>
-                        <div class="right">
+                        <!-- <div class="right">
                             <div class="quantity">
                                 <a>0</a>
                             </div>
@@ -81,7 +104,7 @@
                             <div class="btn">
                                 -
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="card">
@@ -98,7 +121,7 @@
                                 <a>16.5 EUR</a>
                             </div>
                         </div>
-                        <div class="right">
+                        <!-- <div class="right">
                             <div class="quantity">
                                 <a>0</a>
                             </div>
@@ -108,7 +131,7 @@
                             <div class="btn">
                                 -
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="card">
@@ -125,7 +148,7 @@
                                 <a>16.5 EUR</a>
                             </div>
                         </div>
-                        <div class="right">
+                        <!-- <div class="right">
                             <div class="quantity">
                                 <a>0</a>
                             </div>
@@ -135,7 +158,7 @@
                             <div class="btn">
                                 -
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="card">
@@ -152,7 +175,7 @@
                                 <a>29.95 EUR</a>
                             </div>
                         </div>
-                        <div class="right">
+                        <!-- <div class="right">
                             <div class="quantity">
                                 <a>0</a>
                             </div>
@@ -162,10 +185,10 @@
                             <div class="btn">
                                 -
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="item1">
                     <a href="#">
                         <img src="./img/shop/alessandro1.png" class="img" alt="Gallery item" />
                     </a>
@@ -173,26 +196,61 @@
                         <div class="left">
                             <div class="title">
                                 <a>CREAM RICH SENSITIVE</a>
+                                <p>Intensyviai drėkinamasis rankų kremas su hialurono rūgštimi ir skvalenu (75ml)</p>
                             </div>
                             <div class="price">
                                 <a>3.5 EUR</a>
                             </div>
                         </div>
-                        <div class="right">
-                            <div class="quantity">
+                        <!-- <div class="right">
+                            <div class="quantity" id="count">
                                 <a>0</a>
                             </div>
-                            <div class="btn">
+                            <button class="btn" onclick="countUp()">
                                 +
-                            </div>
-                            <div class="btn">
+                            </button>
+                            <div class="btn" onclick="countDown()">
                                 -
                             </div>
                         </div>
+                    </div> -->
+                        <!-- <button class="btn" onClick="addToCart()">Ad to Cart</button> -->
                     </div>
                 </div>
-            </div>
     </section>
+    <script>
+        let count = 0;
+        function countUp() {
+            count++;
+            document.getElementById('count').textContent = count;
+        }
+        function countDown() {
+            count--;
+            if (count >= 0) {
+                document.getElementById('count').textContent = count;
+            }
+        }
+
+        function addToCart() {
+            const title = document.querySelector('.title').textContent;
+            const price = document.querySelector('.price').textContent;
+            const quantity = document.getElementById('count').textContent;
+
+            const product = {
+                title: title,
+                price: price,
+                quantity: quantity
+            };
+
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            cartItems.push(product);
+            console.log(cartItems);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            window.location.href = 'cart.html';
+        }
+    </script>
 </body>
 
 </html>
