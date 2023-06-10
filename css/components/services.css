@@ -4,6 +4,9 @@
         rgba(139, 204, 204, 0.5),
         rgba(220, 172, 211, 0.5)
     );
+    position: relative;
+    z-index: -1;
+    top: 0px;
 }
 
 .row .services-description {
