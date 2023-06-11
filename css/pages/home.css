@@ -8,6 +8,7 @@
 /* components (by alphabet):  */
 @import '../components/experts-gallery.css';
 @import '../components/footer.css';
+@import '../components/form.css';
 @import '../components/gallery.css';
 @import '../components/header-underline.css';
 @import '../components/services.css';
@@ -249,6 +250,37 @@ nav > .btn:hover {
     margin-right: 2px;
     font-size: 24px;
 }
+
+/* Page Contacts start*/
+.row.contacts,
+.row.map {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 600px;
+    margin-left: calc(50% - 300px);
+    flex-wrap: wrap;
+}
+
+iframe {
+    border-radius: 5px;
+}
+
+.row.contacts > h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.row.contacts > address {
+    margin-bottom: 20px;
+}
+
+.row.map > p {
+    margin-bottom: 20px;
+}
+
+/* Page Contacts end*/
 
 /*Item*/
 

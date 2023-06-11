@@ -7,6 +7,7 @@ form {
         'msg'
         'btn';
     gap: 10px;
+    margin-bottom: 30px;
 }
 
 form > .cell-1 {
