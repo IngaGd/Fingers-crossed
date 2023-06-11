@@ -10,6 +10,15 @@
     margin-left: calc(50% - 1175px / 2);
 }
 
+.container > .short-row {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin-left: calc(50% - 350px);
+    gap: 60px;
+    text-align: center;
+}
+
 @media (max-width: 576px) {
     .container {
         padding-left: 20px;

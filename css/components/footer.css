@@ -4,7 +4,7 @@
     background-color: rgba(220, 172, 211, 0.3);
 }
 
-.footer > .row.top {
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,27 +12,53 @@
 
 .logo.footer {
     align-items: flex-start;
-    width: 120px;
+    width: 130px;
 }
 
-.contacts {
-    line-height: 1.6;
+.left-content {
+    line-height: 0.9cm;
+    font-size: 16px;
 }
 
-.contacts > a {
-    margin-top: 5px;
-    margin-left: 5px;
+.socials > a {
     font-size: 20px;
-    padding: 5px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
     transition: all 0.3s;
 }
 
-.contacts > a:hover {
+.socials > a:hover {
     background-color: var(--secondary-color);
     font-size: larger;
     color: #fff;
 }
 
-.terms {
-    text-align: right;
+.terms > a,
+.copyright {
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.terms > a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    .container.footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .container.footer > .row {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .left-content > .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

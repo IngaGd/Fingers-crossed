@@ -1,0 +1,62 @@
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'email'
+        'name'
+        'msg'
+        'btn';
+    gap: 10px;
+}
+
+form > .cell-1 {
+    grid-column: span 1;
+}
+
+form > div > label {
+    display: none;
+}
+
+form > div > input,
+form > div > textarea {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 14px;
+    line-height: 1.2em;
+    border: 2px solid #f0edf1;
+    color: black;
+}
+
+form > div > textarea {
+    min-height: 6.6em;
+    max-height: 22em;
+    resize: vertical;
+}
+
+form > div:nth-child(4) {
+    grid-area: btn;
+    display: grid;
+    justify-content: end;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: white;
+    width: auto;
+    display: inline-block;
+    padding: 0.7em;
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    border: none;
+    font-size: 16px;
+    line-height: 1em;
+    border-radius: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0.85;
+}
+
+.btn:hover {
+    box-shadow: 5px 10px 5px #0003;
+    opacity: 1;
+}
