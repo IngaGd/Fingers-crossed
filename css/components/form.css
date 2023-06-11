@@ -18,6 +18,14 @@ form > div > label {
     display: none;
 }
 
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
 form > div > input,
 form > div > textarea {
     width: 100%;
@@ -25,6 +33,7 @@ form > div > textarea {
     font-size: 14px;
     line-height: 1.2em;
     border: 2px solid #f0edf1;
+    border-radius: 3px;
     color: black;
 }
 
@@ -40,7 +49,7 @@ form > div:nth-child(4) {
     justify-content: end;
 }
 
-.btn {
+.form-btn {
     background-color: var(--secondary-color);
     color: white;
     width: auto;
@@ -55,9 +64,21 @@ form > div:nth-child(4) {
     cursor: pointer;
     transition: all 0.3s;
     opacity: 0.85;
+    border-radius: 3px;
 }
 
-.btn:hover {
+.form-btn:hover {
     box-shadow: 5px 10px 5px #0003;
     opacity: 1;
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .container > .short-row {
+        width: 100%;
+        margin: 0;
+    }
 }

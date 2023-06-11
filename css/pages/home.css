@@ -274,13 +274,24 @@ iframe {
 
 .row.contacts > address {
     margin-bottom: 20px;
+    line-height: 0.7cm;
 }
 
 .row.map > p {
     margin-bottom: 20px;
 }
 
+.short-row > .text > .title {
+    margin-bottom: 14px;
+}
+
 /* Page Contacts end*/
+
+/* page Terms start*/
+.container.terms {
+    height: 60vh;
+}
+/* page Terms start*/
 
 /*Item*/
 
@@ -312,10 +323,14 @@ iframe {
     margin-top: 100px;
     width: 70%;
     float: right;
+    line-height: 0.6cm;
+    text-align: justify;
+    padding-right: 60px;
 }
 
 .top > .title {
     font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .top {
@@ -356,15 +371,29 @@ iframe {
     .container.nav {
         padding-bottom: 0;
     }
+
+    .container.contacts,
+    .container.item {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .container.nav-mob {
         padding-left: 20px;
         padding-right: 20px;
         height: 20px;
     }
-    .row .main-header > .nav-mob {
+    .row .main-header > .nav-mob,
+    .row.contacts,
+    .row.map,
+    iframe,
+    .container.item > .row {
         width: 100%;
         margin: 0;
     }
+    .item {
+        flex-direction: column;
+    }
+
     nav {
         display: none;
     }
@@ -437,5 +466,27 @@ iframe {
     .secondary-title {
         padding-top: 20px;
         font-size: 15px;
+    }
+
+    .row > .item > .left-side {
+        margin-top: 20px;
+        height: 250px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .row > .item > .right-side {
+        align-items: center;
+        width: 100%;
+        padding-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        text-align: justify;
+        line-height: 0.6cm;
+    }
+
+    .top > .title {
+        font-size: 20px;
     }
 }
