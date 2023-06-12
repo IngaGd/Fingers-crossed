@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+
+        li button {
+            font-size: 12px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="card" id="item1">
+        <a href="#">
+            <img src="./img/shop/alessandro1.png" class="img" alt="Gallery item" />
+        </a>
+        <div class="description">
+            <div class="left">
+                <div>
+                    <a class="title">CREAM RICH SENSITIVE</a>
+                    <p>Intensyviai drėkinamasis rankų kremas su hialurono rūgštimi ir skvalenu (75ml)</p>
+                </div>
+                <div class="price">
+                    <a>3.5 EUR</a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="quantity" id="count">
+                    <a>0</a>
+                </div>
+                <button class="btn" onclick="countUp()">
+                    +
+                </button>
+                <div class="btn" onclick="countDown()">
+                    -
+                </div>
+            </div>
+        </div>
+        <button class="addBtn">Ad to Cart</button>
+    </div> -->
+
+    <ul id="cartList"></ul>
+    <script>
+        const itemTitle = localStorage.getItem('itemTitle');
+        const itemPrice = localStorage.getItem('itemPrice');
+        const itemQuantity = localStorage.getItem('itemQuantity');
+        const itemImageSrc = localStorage.getItem('itemImageSrc');
+
+        const listItem = document.createElement('li');
+        const listText1 = document.createElement('p');
+        const listText2 = document.createElement('p');
+        const listText3 = document.createElement('p');
+        const listBtn = document.createElement('button');
+        const itemImage = document.createElement('img');
+
+        itemImage.src = itemImageSrc;
+        listText1.textContent = itemTitle;
+        listText2.textContent = itemPrice;
+        listText3.textContent = itemQuantity;
+        listBtn.textContent = 'Remove';
+
+        const cartList = document.getElementById('cartList');
+        cartList.appendChild(listItem);
+        listItem.appendChild(itemImage);
+        listItem.appendChild(listText1);
+        listItem.appendChild(listText2);
+        listItem.appendChild(listText3);
+        listItem.appendChild(listBtn);
+
+        listBtn.addEventListener('click', () => {
+            cartList.removeChild(listItem);
+        });
+    </script>
+</body>
+
+</html>

@@ -24,6 +24,7 @@
         </a>
         <a class="link" href="Shop.html">Parduotuvė</a>
         <a class="link" href="contacts.html">Kontaktai</a>
+        <a class="link" href="cart.html">Krepšelis</a>
         <a class="btn" href="https://fingers-crossed-nail-studio.mytreatwell.lt/?fbclid=PAAaZ1c67PnrUYjey9ZzL7tUeaZ0k4f3P8zsvxOLFeZBP1QSRvGSs4y-K_rW8">Rezervuok</a>
     </nav>
     <div class="nav-mob">
@@ -198,7 +199,7 @@
                                 <a>3.5 EUR</a>
                             </div>
                         </div>
-                        <!-- <div class="right">
+                        <div class="right">
                             <div class="quantity" id="count">
                                 <a>0</a>
                             </div>
@@ -209,10 +210,10 @@
                                 -
                             </div>
                         </div>
-                    </div> -->
-                        <!-- <button class="btn" onClick="addToCart()">Ad to Cart</button> -->
                     </div>
+                    <button class="addBtn">Ad to Cart</button>
                 </div>
+            </div>
     </section>
     <!-- footer section start-->
     <section class="container footer">
@@ -242,25 +243,43 @@
             }
         }
 
-        function addToCart() {
-            const title = document.querySelector('.title').textContent;
-            const price = document.querySelector('.price').textContent;
-            const quantity = document.getElementById('count').textContent;
+        // function addToCart() {
+        //     const title = document.querySelector('.title').textContent;
+        //     const price = document.querySelector('.price').textContent;
+        //     const quantity = document.getElementById('count').textContent;
 
-            const product = {
-                title: title,
-                price: price,
-                quantity: quantity
-            };
+        //     const product = {
+        //         title: title,
+        //         price: price,
+        //         quantity: quantity
+        //     };
 
-            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        //     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-            cartItems.push(product);
-            console.log(cartItems);
-            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        //     cartItems.push(product);
+        //     console.log(cartItems);
+        //     localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        //     window.location.href = 'cart.html';
+        // }
+        const title = document.querySelector('.title');
+        const price = document.querySelector('.price');
+        const quantity = document.querySelector('.quantity');
+        const button = document.querySelector('.addBtn');
+
+        button.addEventListener('click', () => {
+            const itemTitle = title.textContent;
+            const itemPrice = price.textContent;
+            const itemQuantity = quantity.textContent;
+            const itemImageSrc = document.querySelector('.img').src;
+
+            localStorage.setItem('itemTitle', itemTitle);
+            localStorage.setItem('itemPrice', itemPrice);
+            localStorage.setItem('itemQuantity', itemQuantity);
+            localStorage.setItem('itemImageSrc', itemImageSrc);
 
             window.location.href = 'cart.html';
-        }
+        });
     </script>
 </body>
 
