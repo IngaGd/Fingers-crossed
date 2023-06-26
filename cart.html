@@ -4,51 +4,48 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping list example</title>
+    <link rel="stylesheet" href="./css/pages/home.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/codec-pro">
     <style>
-        li {
-            margin-bottom: 10px;
-        }
-
-        li button {
-            font-size: 12px;
-            margin-left: 20px;
-            color: #666;
-        }
+        @import url('https://fonts.cdnfonts.com/css/codec-pro');
     </style>
+    <title>Shopping list</title>
 </head>
 
 <body>
-
-    <!-- <div class="card" id="item1">
-        <a href="#">
-            <img src="./img/shop/alessandro1.png" class="img" alt="Gallery item" />
+    <nav class="main-header">
+        <a class="link" href="aboutUs.html">Apie mus</a>
+        <a class="link" href="https://fingers-crossed-nail-studio.mytreatwell.lt/services.html">Kainos</a>
+        <a class="link" href="#">Galerija</a>
+        <a class="logo-link" href="index.html">
+            <img class="logo" src="./img/logo/Fingers_crossed_logopos_small.png" alt="Logo">
         </a>
-        <div class="description">
-            <div class="left">
-                <div>
-                    <a class="title">CREAM RICH SENSITIVE</a>
-                    <p>Intensyviai drėkinamasis rankų kremas su hialurono rūgštimi ir skvalenu (75ml)</p>
-                </div>
-                <div class="price">
-                    <a>3.5 EUR</a>
-                </div>
-            </div>
-            <div class="right">
-                <div class="quantity" id="count">
-                    <a>0</a>
-                </div>
-                <button class="btn" onclick="countUp()">
-                    +
-                </button>
-                <div class="btn" onclick="countDown()">
-                    -
-                </div>
+        <a class="link" href="Shop.html">Parduotuvė</a>
+        <a class="link" href="contacts.html">Kontaktai</a>
+        <a class="link" href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+        </a>
+        <a class="btn" href="https://fingers-crossed-nail-studio.mytreatwell.lt/?fbclid=PAAaZ1c67PnrUYjey9ZzL7tUeaZ0k4f3P8zsvxOLFeZBP1QSRvGSs4y-K_rW8">Rezervuok</a>
+    </nav>
+    <div class="nav-mob">
+        <a class="logo-link-mob" href="index.html">
+            <img class="logo" src="./img/logo/Fingers_crossed_logopos_small.png" alt="Logo">
+        </a>
+        <div class="dropdown">
+            <button class="link">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu active">
+                <a class="link" href="aboutUs.html">Apie mus</a>
+                <a class="link" href="https://fingers-crossed-nail-studio.mytreatwell.lt/services.html">Kainos</a>
+                <a class="link" href="#">Galerija</a>
+                <a class="link" href="Shop.html">Parduotuvė</a>
+                <a class="link" href="contacts.html">Kontaktai</a>
+                <a class="link" href="cart.html">Krepšelis</a>
+                <a class="btn" href="https://fingers-crossed-nail-studio.mytreatwell.lt/?fbclid=PAAaZ1c67PnrUYjey9ZzL7tUeaZ0k4f3P8zsvxOLFeZBP1QSRvGSs4y-K_rW8">Rezervuok</a>
             </div>
         </div>
-        <button class="addBtn">Ad to Cart</button>
-    </div> -->
-
+    </div>
     <ul id="cartList"></ul>
     <script>
         const itemTitle = localStorage.getItem('itemTitle');
