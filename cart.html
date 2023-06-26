@@ -47,36 +47,73 @@
         </div>
     </div>
     <ul id="cartList"></ul>
+    <div id="sum-total"></div>
     <script>
-        const itemTitle = localStorage.getItem('itemTitle');
-        const itemPrice = localStorage.getItem('itemPrice');
-        const itemQuantity = localStorage.getItem('itemQuantity');
-        const itemImageSrc = localStorage.getItem('itemImageSrc');
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-        const listItem = document.createElement('li');
-        const listText1 = document.createElement('p');
-        const listText2 = document.createElement('p');
-        const listText3 = document.createElement('p');
-        const listBtn = document.createElement('button');
-        const itemImage = document.createElement('img');
+        cartItems.forEach(item => {
+            const listItem = document.createElement('li');
+            const listText1 = document.createElement('p');
+            const listText2 = document.createElement('p');
+            const listText3 = document.createElement('p');
+            const listText4 = document.createElement('p');
+            const listBtn = document.createElement('button');
+            const itemImage = document.createElement('img');
+            const addBtn = document.createElement('button');
+            const reduceBtn = document.createElement('button');
 
-        itemImage.src = itemImageSrc;
-        listText1.textContent = itemTitle;
-        listText2.textContent = itemPrice;
-        listText3.textContent = itemQuantity;
-        listBtn.textContent = 'Remove';
+            itemImage.src = item.imageSrc;
+            listText1.textContent = item.title;
+            listText2.textContent = item.price;
+            listText3.textContent = item.quantity;
+            listBtn.textContent = 'Remove';
+            addBtn.textContent = '+';
+            reduceBtn.textContent = '-';
+            listText4.textContent = item.quantity * item.price;
+            console.log(listText4.textContent);
 
-        const cartList = document.getElementById('cartList');
-        cartList.appendChild(listItem);
-        listItem.appendChild(itemImage);
-        listItem.appendChild(listText1);
-        listItem.appendChild(listText2);
-        listItem.appendChild(listText3);
-        listItem.appendChild(listBtn);
+            const cartList = document.getElementById('cartList');
+            cartList.appendChild(listItem);
+            listItem.appendChild(itemImage);
+            listItem.appendChild(listText1);
+            listItem.appendChild(listText2);
+            listItem.appendChild(listText3);
+            listItem.appendChild(listText4);
+            listItem.appendChild(listBtn);
+            listItem.appendChild(addBtn);
+            listItem.appendChild(reduceBtn);
 
-        listBtn.addEventListener('click', () => {
-            cartList.removeChild(listItem);
+
+            listBtn.addEventListener('click', () => {
+                const index = cartItems.indexOf(item);
+                if (index > -1) {
+                    cartItems.splice(index, 1);
+                }
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                cartList.removeChild(listItem);
+            });
+
+            addBtn.addEventListener('click', () => {
+                const index = cartItems.indexOf(item);
+                if (index > -1) {
+                    let incr = parseInt(listText3.textContent);
+                    listText3.textContent = incr + 1;
+                    let total = parseFloat(listText2.textContent).toFixed(2) * parseFloat(listText3.textContent).toFixed(2);
+                    listText4.textContent = total;
+                }
+            });
+
+            reduceBtn.addEventListener('click', () => {
+                const index = cartItems.indexOf(item);
+                if (index > -1) {
+                    let decr = parseInt(listText3.textContent);
+                    listText3.textContent = decr - 1;
+                    let total = parseFloat(listText2.textContent).toFixed(2) * parseFloat(listText3.textContent).toFixed(2);
+                    listText4.textContent = total;
+                }
+            });
         });
+
     </script>
 </body>
 

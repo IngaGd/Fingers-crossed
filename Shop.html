@@ -67,18 +67,15 @@
                                 <a>17.5 EUR</a>
                             </div>
                         </div>
-                        <!-- <div class="right">
+                        <div class="right">
                             <div class="quantity">
                                 <a>0</a>
                             </div>
-                            <div class="btn">
-                                +
-                            </div>
-                            <div class="btn">
-                                -
-                            </div>
-                        </div> -->
+                            <button class="btn btn-increment">+</button>
+                            <button class="btn btn-decrement">-</button>
+                        </div>
                     </div>
+                    <button class="addBtn">Ad to Cart</button>
                 </div>
                 <div class="card">
                     <a href="#">
@@ -94,18 +91,15 @@
                                 <a>43.00 EUR</a>
                             </div>
                         </div>
-                        <!-- <div class="right">
+                        <div class="right">
                             <div class="quantity">
                                 <a>0</a>
                             </div>
-                            <div class="btn">
-                                +
-                            </div>
-                            <div class="btn">
-                                -
-                            </div>
-                        </div> -->
+                            <button class="btn btn-increment">+</button>
+                            <button class="btn btn-decrement">-</button>
+                        </div>
                     </div>
+                    <button class="addBtn">Ad to Cart</button>
                 </div>
                 <div class="card">
                     <a href="#">
@@ -121,18 +115,15 @@
                                 <a>16.5 EUR</a>
                             </div>
                         </div>
-                        <!-- <div class="right">
+                        <div class="right">
                             <div class="quantity">
                                 <a>0</a>
                             </div>
-                            <div class="btn">
-                                +
-                            </div>
-                            <div class="btn">
-                                -
-                            </div>
-                        </div> -->
+                            <button class="btn btn-increment">+</button>
+                            <button class="btn btn-decrement">-</button>
+                        </div>
                     </div>
+                    <button class="addBtn">Ad to Cart</button>
                 </div>
                 <div class="card">
                     <a href="#">
@@ -148,20 +139,17 @@
                                 <a>16.5 EUR</a>
                             </div>
                         </div>
-                        <!-- <div class="right">
+                        <div class="right">
                             <div class="quantity">
                                 <a>0</a>
                             </div>
-                            <div class="btn">
-                                +
-                            </div>
-                            <div class="btn">
-                                -
-                            </div>
-                        </div> -->
+                            <button class="btn btn-increment">+</button>
+                            <button class="btn btn-decrement">-</button>
+                        </div>
                     </div>
+                    <button class="addBtn">Ad to Cart</button>
                 </div>
-                <div class="card">
+                <div class="card" id="item5">
                     <a href="#">
                         <img src="./img/shop/alessandro5.png" class="img" alt="Gallery item" />
                     </a>
@@ -172,21 +160,18 @@
                                 <p>Intensyviai drėkinanti kaukė rankoms (50ml)</p>
                             </div>
                             <div class="price">
-                                <a>29.95 EUR</a>
+                                <a>29.95</a>
                             </div>
                         </div>
-                        <!-- <div class="right">
+                        <div class="right">
                             <div class="quantity">
                                 <a>0</a>
                             </div>
-                            <div class="btn">
-                                +
-                            </div>
-                            <div class="btn">
-                                -
-                            </div>
-                        </div> -->
+                            <button class="btn btn-increment">+</button>
+                            <button class="btn btn-decrement">-</button>
+                        </div>
                     </div>
+                    <button class="addBtn">Ad to Cart</button>
                 </div>
                 <div class="card" id="item1">
                     <a href="#">
@@ -199,19 +184,15 @@
                                 <p>Intensyviai drėkinamasis rankų kremas su hialurono rūgštimi ir skvalenu (75ml)</p>
                             </div>
                             <div class="price">
-                                <a>3.5 EUR</a>
+                                <a>3.5</a>
                             </div>
                         </div>
                         <div class="right">
-                            <div class="quantity" id="count">
+                            <div class="quantity">
                                 <a>0</a>
                             </div>
-                            <button class="btn" onclick="countUp()">
-                                +
-                            </button>
-                            <div class="btn" onclick="countDown()">
-                                -
-                            </div>
+                            <button class="btn btn-increment">+</button>
+                            <button class="btn btn-decrement">-</button>
                         </div>
                     </div>
                     <button class="addBtn">Ad to Cart</button>
@@ -234,55 +215,62 @@
     </section>
     <!-- footer section end-->
     <script>
-        let count = 0;
-        function countUp() {
-            count++;
-            document.getElementById('count').textContent = count;
-        }
-        function countDown() {
-            count--;
-            if (count >= 0) {
-                document.getElementById('count').textContent = count;
-            }
-        }
 
-        // function addToCart() {
-        //     const title = document.querySelector('.title').textContent;
-        //     const price = document.querySelector('.price').textContent;
-        //     const quantity = document.getElementById('count').textContent;
+        let incrementButtons = document.querySelectorAll('.btn-increment');
+        let decrementButtons = document.querySelectorAll('.btn-decrement');
 
-        //     const product = {
-        //         title: title,
-        //         price: price,
-        //         quantity: quantity
-        //     };
-
-        //     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-        //     cartItems.push(product);
-        //     console.log(cartItems);
-        //     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-        //     window.location.href = 'cart.html';
-        // }
-        const title = document.querySelector('.title');
-        const price = document.querySelector('.price');
-        const quantity = document.querySelector('.quantity');
-        const button = document.querySelector('.addBtn');
-
-        button.addEventListener('click', () => {
-            const itemTitle = title.textContent;
-            const itemPrice = price.textContent;
-            const itemQuantity = quantity.textContent;
-            const itemImageSrc = document.querySelector('.img').src;
-
-            localStorage.setItem('itemTitle', itemTitle);
-            localStorage.setItem('itemPrice', itemPrice);
-            localStorage.setItem('itemQuantity', itemQuantity);
-            localStorage.setItem('itemImageSrc', itemImageSrc);
-
-            window.location.href = 'cart.html';
+        incrementButtons.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                let card = e.target.closest('.card');
+                let quantity = card.querySelector('.quantity');
+                let count = parseInt(quantity.textContent, 10);
+                quantity.textContent = count + 1;
+            });
         });
+
+        decrementButtons.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                let card = e.target.closest('.card');
+                let quantity = card.querySelector('.quantity');
+                let count = parseInt(quantity.textContent, 10);
+                if (count > 0) {
+                    quantity.textContent = count - 1;
+                }
+            });
+        });
+
+        let buttons = document.querySelectorAll('.addBtn');
+
+        buttons.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                let card = e.target.closest('.card');
+
+                let itemTitle = card.querySelector('.title').textContent;
+                let itemPrice = parseFloat(card.querySelector('.price').textContent).toFixed(2);
+                let itemQuantity = parseInt(card.querySelector('.quantity').textContent);
+                let itemImageSrc = card.querySelector('.img').src;
+
+                let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+                let existingItem = cartItems.find(item => item.title === itemTitle && item.price === itemPrice);
+
+                if (existingItem) {
+                    existingItem.quantity += itemQuantity;
+                } else {
+                    let item = {
+                        title: itemTitle,
+                        price: itemPrice,
+                        quantity: itemQuantity,
+                        imageSrc: itemImageSrc
+                    };
+                    cartItems.push(item);
+                }
+
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                window.location.href = 'cart.html';
+            });
+        });
+
     </script>
 </body>
 
