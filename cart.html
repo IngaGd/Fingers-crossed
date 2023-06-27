@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/pages/home.css">
+    <link rel="stylesheet" href="./css/pages/cart.css">
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/codec-pro">
     <style>
         @import url('https://fonts.cdnfonts.com/css/codec-pro');
@@ -46,27 +47,67 @@
             </div>
         </div>
     </div>
-    <ul id="cartList"></ul>
+    <section class="container cart">
+        <div class="row">
+            <ul class="cart-list" id="cartList"></ul>
+        </div>
+    </section>
     <div id="sum-total"></div>
+
+    <section class="container footer">
+        <div class="row">
+            <img class="logo footer" src="./img/logo/Fingers_crossed_logopos_small.png" alt="Logo">
+            <div class="left-content">
+                <div class="socials">
+                    <a href="https://www.facebook.com/FingersCrossedNailStudio" class="icon fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/fingers_crossed_studio/" class="icon fa fa-instagram"></a>
+                </div>
+                <div class="terms"><a href="terms.html">Pristatymo sąlygos</a></div>
+                <div class="copyright ">Copyright &copy; 2023</div>
+            </div>
+        </div>
+    </section>
     <script>
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
         cartItems.forEach(item => {
             const listItem = document.createElement('li');
+            listItem.classList.add('list-item');
+            const imgContainer = document.createElement('div');
+            imgContainer.classList.add('img-container');
+            const descrContainer = document.createElement('div');
+            descrContainer.classList.add('description-container');
+            const description = document.createElement('div');
+            description.classList.add('description');
+            const priceContainer = document.createElement('div');
+            priceContainer.classList.add('price-container');
+            const qtyContainer = document.createElement('div');
+            qtyContainer.classList.add('quantity-container');
             const listText1 = document.createElement('p');
+            listText1.classList.add('item-title');
             const listText2 = document.createElement('p');
+            listText2.classList.add('item-price');
             const listText3 = document.createElement('p');
+            listText3.classList.add('item-quantity');
             const listText4 = document.createElement('p');
+            listText4.classList.add('item-price-total');
+            const listText5 = document.createElement('p');
+            listText5.classList.add('item-descriprion')
             const listBtn = document.createElement('button');
+            listBtn.classList.add('remove-btn');
             const itemImage = document.createElement('img');
+            itemImage.classList.add('item-img');
             const addBtn = document.createElement('button');
+            addBtn.classList.add('add-btn');
             const reduceBtn = document.createElement('button');
+            reduceBtn.classList.add('reduce-btn');
 
             itemImage.src = item.imageSrc;
             listText1.textContent = item.title;
             listText2.textContent = item.price;
             listText3.textContent = item.quantity;
-            listBtn.textContent = 'Remove';
+            listText5.textContent = item.description;
+            listBtn.textContent = 'Pašalinti';
             addBtn.textContent = '+';
             reduceBtn.textContent = '-';
             listText4.textContent = item.quantity * item.price;
@@ -74,14 +115,20 @@
 
             const cartList = document.getElementById('cartList');
             cartList.appendChild(listItem);
-            listItem.appendChild(itemImage);
-            listItem.appendChild(listText1);
-            listItem.appendChild(listText2);
-            listItem.appendChild(listText3);
-            listItem.appendChild(listText4);
-            listItem.appendChild(listBtn);
-            listItem.appendChild(addBtn);
-            listItem.appendChild(reduceBtn);
+            listItem.appendChild(imgContainer);
+            imgContainer.appendChild(itemImage);
+            listItem.appendChild(descrContainer);
+            descrContainer.appendChild(description);
+            description.appendChild(listText1);
+            description.appendChild(listText5);
+            descrContainer.appendChild(priceContainer);
+            priceContainer.appendChild(listText2);
+            priceContainer.appendChild(qtyContainer);
+            qtyContainer.appendChild(listText3);
+            qtyContainer.appendChild(addBtn);
+            qtyContainer.appendChild(reduceBtn);
+            priceContainer.appendChild(listText4);
+            descrContainer.appendChild(listBtn);
 
 
             listBtn.addEventListener('click', () => {

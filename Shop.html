@@ -258,7 +258,8 @@
             btn.addEventListener('click', (e) => {
                 let card = e.target.closest('.card');
 
-                let itemTitle = card.querySelector('.title').textContent;
+                let itemTitle = card.querySelector('.title a').textContent;
+                let itemDescription = card.querySelector('.title p').textContent;
                 let itemPrice = parseFloat(card.querySelector('.price').textContent).toFixed(2);
                 let itemQuantity = parseInt(card.querySelector('.quantity').textContent);
                 let itemImageSrc = card.querySelector('.img').src;
@@ -272,6 +273,7 @@
                 } else {
                     let item = {
                         title: itemTitle,
+                        description: itemDescription,
                         price: itemPrice,
                         quantity: itemQuantity,
                         imageSrc: itemImageSrc
