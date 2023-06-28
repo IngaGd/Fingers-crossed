@@ -438,6 +438,7 @@ iframe {
         padding: 0.75rem;
         border-radius: 0.25rem;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+        opacity: 0;
     }
 
     */ .container.list {
