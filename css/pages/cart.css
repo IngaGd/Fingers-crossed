@@ -1,5 +1,9 @@
 @import '../basic/base.css';
 
+/* .container.cart {
+    height: 60vh;
+} */
+
 .container.cart > .row {
     display: flex;
     flex-direction: row;
@@ -16,7 +20,7 @@
     width: 1100px;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgba(220, 172, 211, 0.5);
+    background-color: rgba(220, 172, 211, 0.4);
     margin-bottom: 20px;
     border-radius: 3px;
 }
@@ -52,9 +56,18 @@
     font-size: 18px;
 }
 
+.text-total {
+    display: flex;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 5px;
+    justify-content: flex-end;
+}
+
 .price-container {
     display: flex;
-    width: 70%;
+    align-items: center;
+    width: 90%;
     font-size: 20px;
     flex-direction: row;
     justify-content: space-between;
@@ -77,10 +90,15 @@
     margin-right: 8px;
 }
 
+.total-container {
+    display: flex;
+}
+
 .item-price {
 }
 
 .item-price-total {
+    margin-right: 8px;
 }
 
 .remove-btn {
@@ -96,7 +114,6 @@
 }
 
 .remove-btn:hover {
-    /* box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1); */
     box-shadow: 0 5px 10px rgb(0 0 0 /20%);
 }
 
@@ -104,4 +121,7 @@
 }
 
 .reduce-btn {
+}
+
+@media (max-width: 576px) {
 }

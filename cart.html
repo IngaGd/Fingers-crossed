@@ -79,6 +79,8 @@
             descrContainer.classList.add('description-container');
             const description = document.createElement('div');
             description.classList.add('description');
+            const textTotal = document.createElement('div');
+            textTotal.classList.add('text-total');
             const priceContainer = document.createElement('div');
             priceContainer.classList.add('price-container');
             const qtyContainer = document.createElement('div');
@@ -101,6 +103,10 @@
             addBtn.classList.add('add-btn');
             const reduceBtn = document.createElement('button');
             reduceBtn.classList.add('reduce-btn');
+            const span1 = document.createElement('span');
+            const eur = document.createElement('p');
+            const total = document.createElement('div');
+            total.classList.add('total-container');
 
             itemImage.src = item.imageSrc;
             listText1.textContent = item.title;
@@ -110,8 +116,11 @@
             listBtn.textContent = 'Pašalinti';
             addBtn.textContent = '+';
             reduceBtn.textContent = '-';
-            listText4.textContent = item.quantity * item.price;
+            listText4.textContent = (item.quantity * item.price).toFixed(2);
             console.log(listText4.textContent);
+            span1.textContent = ' EUR';
+            eur.textContent = 'EUR';
+            textTotal.textContent = 'Iš viso: ';
 
             const cartList = document.getElementById('cartList');
             cartList.appendChild(listItem);
@@ -121,13 +130,17 @@
             descrContainer.appendChild(description);
             description.appendChild(listText1);
             description.appendChild(listText5);
+            descrContainer.appendChild(textTotal);
             descrContainer.appendChild(priceContainer);
             priceContainer.appendChild(listText2);
+            listText2.appendChild(span1);
             priceContainer.appendChild(qtyContainer);
             qtyContainer.appendChild(listText3);
             qtyContainer.appendChild(addBtn);
             qtyContainer.appendChild(reduceBtn);
-            priceContainer.appendChild(listText4);
+            priceContainer.appendChild(total);
+            total.appendChild(listText4);
+            total.appendChild(eur);
             descrContainer.appendChild(listBtn);
 
 
@@ -146,7 +159,7 @@
                     let incr = parseInt(listText3.textContent);
                     listText3.textContent = incr + 1;
                     let total = parseFloat(listText2.textContent).toFixed(2) * parseFloat(listText3.textContent).toFixed(2);
-                    listText4.textContent = total;
+                    listText4.textContent = total.toFixed(2);
                 }
             });
 
@@ -156,7 +169,7 @@
                     let decr = parseInt(listText3.textContent);
                     listText3.textContent = decr - 1;
                     let total = parseFloat(listText2.textContent).toFixed(2) * parseFloat(listText3.textContent).toFixed(2);
-                    listText4.textContent = total;
+                    listText4.textContent = total.toFixed(2);
                 }
             });
         });
