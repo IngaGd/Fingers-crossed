@@ -61,51 +61,6 @@ nav > .btn:hover {
     color: black;
     border: 1px solid var(--third-color);
 }
-
-@media (max-width: 576px) {
-    .container .nav-mob {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .row .main-header > .nav-mob {
-        width: 100%;
-        margin: 0;
-    }
-    nav {
-        display: none;
-    }
-    .nav-mob {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .nav-mob > a.logo-link-mob > .logo {
-        width: 80px;
-    }
-    .dropdown {
-        position: relative;
-    }
-    .dropdown > button {
-        border: none;
-        background-color: white;
-        cursor: pointer;
-        font-size: 25px;
-        color: black;
-    }
-    .dropdown-menu {
-        position: absolute;
-        left: -40px;
-        top: calc(100% + 0.5rem);
-        font-size: 14px;
-        line-height: 1cm;
-        background-color: white;
-        padding: 0.75rem;
-        border-radius: 0.25rem;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-        opacity: 0;
-    }
-    .dropdown > .dropdown-menu.active {
-        opacity: 1;
-    }
+.fa-shopping-cart {
+    font-size: 30px;
 }

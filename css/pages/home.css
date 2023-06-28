@@ -10,82 +10,13 @@
 @import '../components/footer.css';
 @import '../components/form.css';
 @import '../components/gallery.css';
+@import '../components/header.css';
 @import '../components/header-underline.css';
 @import '../components/services.css';
 @import '../components/video.css';
 /* CUSTOM */
 
 /* header section start */
-.main-header {
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: #fff;
-    /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); */
-}
-
-.nav-mob {
-    display: none;
-}
-
-a > .logo-link {
-    padding: 0;
-}
-
-.logo-link:hover {
-    background-color: initial;
-    color: initial;
-    box-shadow: none;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    /* position: sticky;
-    top: 0; */
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-nav > a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    text-transform: uppercase;
-    padding: 12px 20px 12px 20px;
-    border-radius: 3px;
-    transition: all 0.3s;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-nav > .logo-link > .logo {
-    width: 130px;
-    padding: 0;
-}
-
-nav > a:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    box-shadow: 0 5px 10px rgb(0 0 0 /20%);
-}
-
-nav > .btn {
-    background-color: var(--third-color);
-    color: var(--primary-color);
-}
-
-nav > .btn:hover {
-    background-color: var(--primary-color);
-    color: black;
-    border: 1px solid var(--third-color);
-}
 
 /*  header section end */
 
@@ -507,12 +438,9 @@ iframe {
         padding: 0.75rem;
         border-radius: 0.25rem;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-        opacity: 0;
     }
-    .dropdown > .link:focus + .dropdown-menu {
-        opacity: 1;
-    }
-    .container.list {
+
+    */ .container.list {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -615,8 +543,4 @@ iframe {
         font-size: 18px;
         margin-bottom: 40px;
     }
-}
-
-.fa-shopping-cart {
-    font-size: 30px;
 }
