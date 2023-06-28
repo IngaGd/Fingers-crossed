@@ -417,6 +417,15 @@ iframe {
         width: 80px;
         margin-left: 10px;
     }
+    .icons {
+        display: flex;
+        align-items: center;
+    }
+    .fa-shopping-cart {
+        margin-right: 20px;
+        padding-bottom: 5px;
+        color: rgb(80, 79, 79);
+    }
     .dropdown {
         position: relative;
     }
@@ -425,8 +434,8 @@ iframe {
         background-color: white;
         cursor: pointer;
         font-size: 25px;
-        color: rgb(80, 79, 79);
         margin-right: 20px;
+        color: rgb(80, 79, 79);
     }
     .dropdown-menu {
         position: absolute;
@@ -441,7 +450,7 @@ iframe {
         opacity: 0;
     }
 
-    */ .container.list {
+    .container.list {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -498,6 +507,10 @@ iframe {
         font-size: 20px;
     }
 
+    .container.list > .bottom > button {
+        color: black;
+    }
+
     .cart-list > .list-item {
         width: 100%;
         flex-direction: column;
@@ -543,5 +556,8 @@ iframe {
     .description-container > .price-container {
         font-size: 18px;
         margin-bottom: 40px;
+    }
+    .description-container > .quantity-container > button {
+        color: black;
     }
 }
