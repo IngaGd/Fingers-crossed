@@ -105,7 +105,7 @@ nav > .btn:hover {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
         opacity: 0;
     }
-    .dropdown > .dropdown-menu {
+    .dropdown > .dropdown-menu.active {
         opacity: 1;
     }
 }
